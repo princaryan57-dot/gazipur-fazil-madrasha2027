@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Google Search Optimization Tags -->
+  <title>Gazipur Fazil Madrasha - Batch 2027 Official Cinematic Reel</title>
+  <meta name="description" content="Official cinematic website and memory gallery for Gazipur Fazil Madrasha Batch 2027. Watch trailer, photo reel, and explore student profiles.">
+  <meta name="keywords" content="Gazipur Fazil Madrasha, Gazipur Fazil Madrasha Batch 2027, Gazipur Madrasha, Batch 2027, Gazipur Fazil Madrasha Website">
+  <meta name="author" content="Batch 2027">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph for Facebook & Social Sharing -->
+  <meta property="og:title" content="Gazipur Fazil Madrasha - Batch 2027 Official Reel">
+  <meta property="og:description" content="Experience the memory reel of Gazipur Fazil Madrasha Batch 2027 with custom music and split screen gallery.">
+  <meta property="og:image" content="batch1.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;600;800&family=Hind+Siliguri:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org for Google Search Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Gazipur Fazil Madrasha - Batch 2027",
+    "description": "Official Memory Website of Gazipur Fazil Madrasha Batch 2027",
+    "url": "https://yourdomain.github.io"
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #050507;
+      color: #fff;
+      font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      padding-bottom: 50px;
+    }
+
+    /* ENTRY OVERLAY */
+    .entry-screen {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle, #12121c 0%, #050507 100%);
+      z-index: 9999;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; padding: 20px;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .entry-screen.fade-out { opacity: 0; visibility: hidden; }
+
+    .entry-title {
+      font-family: 'Cinzel', serif;
+      font-size: 32px; color: #e5b642;
+      letter-spacing: 4px; margin-bottom: 10px;
+      text-shadow: 0 0 20px rgba(229, 182, 66, 0.4);
+    }
+
+    .entry-sub { color: #aaa; font-size: 14px; letter-spacing: 2px; margin-bottom: 35px; }
+
+    .enter-btn {
+      background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+      color: #000; border: none; padding: 16px 45px;
+      font-size: 16px; font-weight: 800; border-radius: 40px;
+      cursor: pointer; font-family: 'Cinzel', serif;
+      letter-spacing: 2px; box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+      transition: all 0.3s ease; animation: pulseBtn 2s infinite;
+    }
+
+    @keyframes pulseBtn {
+      0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+      50% { box-shadow: 0 0 35px rgba(212, 175, 55, 0.8); }
+      100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+    }
+
+    /* Top Navigation */
+    .cinema-nav {
+      position: sticky; top: 15px; z-index: 1000;
+      background: rgba(15, 15, 20, 0.75);
+      backdrop-filter: blur(12px);
+      padding: 10px 24px; border-radius: 40px;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      display: flex; gap: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+      margin: 20px 0;
+    }
+
+    .nav-btn {
+      background: transparent; border: none; color: #b5b5c3;
+      padding: 8px 20px; border-radius: 20px; font-weight: 700;
+      letter-spacing: 1px; cursor: pointer; transition: 0.4s;
+      font-family: 'Cinzel', serif; font-size: 13px;
+    }
+
+    .nav-btn.active, .nav-btn:hover {
+      background: linear-gradient(135deg, #e5b642 0%, #b8860b 100%);
+      color: #000; box-shadow: 0 0 15px rgba(229, 182, 66, 0.5);
+    }
+
+    .app-container { width: 100%; max-width: 1100px; padding: 15px; }
+
+    /* Audio Player Bar */
+    .cinema-player-bar {
+      background: linear-gradient(180deg, rgba(20, 20, 28, 0.8) 0%, rgba(10, 10, 14, 0.95) 100%);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 16px; padding: 18px 25px; margin-bottom: 25px;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 15px;
+    }
+
+    .play-btn {
+      background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+      color: #000; border: none; padding: 12px 30px;
+      font-size: 15px; font-weight: 800; border-radius: 30px;
+      cursor: pointer; display: flex; align-items: center; gap: 10px;
+      font-family: 'Cinzel', serif; letter-spacing: 1.5px;
+    }
+
+    .movie-badge {
+      font-family: 'Cinzel', serif; color: #d4af37;
+      font-size: 13px; letter-spacing: 2px;
+    }
+
+    /* 1. TRAILER THEATER VIEW (SPLIT LAYOUT) */
+    .theater-view {
+      display: flex; flex-direction: column; gap: 20px;
+      background: rgba(12, 12, 18, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 16px; padding: 25px;
+    }
+
+    .theater-header {
+      text-align: center; border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 15px;
+    }
+
+    .theater-header h1 {
+      font-family: 'Cinzel', serif; font-size: 26px; color: #e5b642; letter-spacing: 3px;
+    }
+
+    /* Split Container */
+    .split-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      height: 420px;
+    }
+
+    @media (max-width: 768px) {
+      .split-wrapper { grid-template-columns: 1fr; height: auto; }
+    }
+
+    .screen-box {
+      position: relative; width: 100%; height: 100%; min-height: 250px;
+      border-radius: 12px; overflow: hidden;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+
+    .screen-box label {
+      position: absolute; top: 12px; left: 12px; z-index: 10;
+      background: rgba(0,0,0,0.7); color: #d4af37; padding: 4px 12px;
+      font-size: 11px; font-family: 'Cinzel', serif; border-radius: 4px;
+      letter-spacing: 1px; border: 1px solid rgba(212,175,55,0.4);
+    }
+
+    .screen-media { width: 100%; height: 100%; object-fit: cover; }
+
+    .cinema-subtitle {
+      position: absolute; bottom: 15px; left: 5%; right: 5%;
+      text-align: center; background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(6px); padding: 10px 15px; border-radius: 8px;
+      border-left: 3px solid #d4af37; border-right: 3px solid #d4af37;
+    }
+
+    .cinema-subtitle h3 { font-family: 'Cinzel', serif; color: #fff; font-size: 16px; }
+
+    .zoom-burst { animation: zoomBurstAnim 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
+
+    @keyframes zoomBurstAnim {
+      0% { transform: scale(1.1); filter: brightness(1.8); }
+      100% { transform: scale(1); filter: brightness(1); }
+    }
+
+    /* Film Strip */
+    .film-strip { display: flex; gap: 12px; overflow-x: auto; padding-top: 10px; }
+    .film-strip::-webkit-scrollbar { height: 6px; }
+    .film-strip::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+
+    .film-thumb {
+      width: 120px; height: 75px; border-radius: 8px; overflow: hidden;
+      border: 2px solid transparent; cursor: pointer; opacity: 0.5; flex-shrink: 0;
+    }
+    .film-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .film-thumb.active { opacity: 1; border-color: #d4af37; box-shadow: 0 0 12px rgba(212, 175, 55, 0.5); }
+
+    /* CAST & SCENE VIEWS */
+    .cast-view { display: none; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .movie-card { background: #0f0f15; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; }
+    .card-poster { width: 100%; height: 280px; object-fit: cover; }
+    .card-details { padding: 15px; }
+    .card-details h4 { color: #e5b642; font-family: 'Cinzel', serif; }
+
+    .scene-view { display: none; flex-direction: column; gap: 20px; }
+    .scene-row { display: flex; background: #0d0d14; border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px; overflow: hidden; }
+    .scene-media { width: 40%; min-height: 180px; object-fit: cover; }
+    .scene-info { width: 60%; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
+    .active-cinema-card { border-color: #d4af37 !important; box-shadow: 0 0 25px rgba(212, 175, 55, 0.6) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Entry Interface Overlay -->
+  <div class="entry-screen" id="entryScreen">
+    <h1 class="entry-title">GAZIPUR FAZIL MADRASHA</h1>
+    <p class="entry-sub">BATCH 2027 • OFFICIAL CINEMATIC REEL</p>
+    <button class="enter-btn" onclick="startApp()">ENTER EXPERIENCE 🎬</button>
+  </div>
+
+  <!-- Top Cinema Navigation -->
+  <div class="cinema-nav">
+    <button class="nav-btn active" onclick="setMode('theater')">🎬 MAIN TRAILER</button>
+    <button class="nav-btn" onclick="setMode('cast')">🍿 CAST & GALLERY</button>
+    <button class="nav-btn" onclick="setMode('scenes')">📜 SCENE TIMELINE</button>
+  </div>
+
+  <div class="app-container">
+
+    <!-- Audio Player Bar -->
+    <div class="cinema-player-bar">
+      <button class="play-btn" onclick="togglePhonkBeat()">
+        <span id="playIcon">⏸</span> <span id="btnText">PAUSE SCORE</span>
+      </button>
+      <div class="movie-badge">
+        🎼 AUTO BEAT-DETECTION SYNC • BATCH 2027
+      </div>
+    </div>
+
+    <!-- 1. TRAILER THEATER VIEW (SPLIT SCREEN) -->
+    <div class="theater-view" id="theaterView">
+      <div class="theater-header">
+        <h1>GAZIPUR FAZIL MADRASHA • BATCH 2027</h1>
+      </div>
+
+      <div class="split-wrapper">
+        <!-- Left Side: Fixed Intro Video -->
+        <div class="screen-box">
+          <label>OFFICIAL INTRO</label>
+          <video class="screen-media" autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Right Side: Dynamic Photos -->
+        <div class="screen-box">
+          <label>PHOTO REEL</label>
+          <div id="photoMediaBox" style="width:100%; height:100%;">
+            <img src="batch1.jpg" class="screen-media">
+          </div>
+          <div class="cinema-subtitle">
+            <h3 id="cinemaTitle">Play boy😎</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Film Strip Thumbnails -->
+      <div class="film-strip" id="filmStrip"></div>
+    </div>
+
+    <!-- 2. CAST & GALLERY VIEW -->
+    <div class="cast-view" id="castView"></div>
+
+    <!-- 3. SCENE TIMELINE VIEW -->
+    <div class="scene-view" id="sceneView"></div>
+
+  </div>
+
+  <script>
+    const mediaList = [
+      { src: 'batch1.jpg', title: 'Play boy😎' },
+      { src: 'batch2.jpg', title: 'Lucy boy 😎' },
+      { src: 'batch3.jpg', title: 'Lover boy💙' },
+      { src: 'batch4.jpg', title: 'Leader' },
+      { src: 'batch5.jpg', title: 'Topper👌' },
+      { src: 'batch6.jpg', title: 'AI studio' },
+      { src: 'batch7.jpg', title: 'Toyas jamai💋' },
+      { src: 'batch8.jpg', title: 'Takla Murad' },
+      { src: 'batch9.jpg', title: 'Hanif ak 1 j neh' },
+      { src: 'batch10.jpg', title: 'Campus Legend 🔥' },
+      { src: 'batch11.jpg', title: 'Backbench King 👑' },
+      { src: 'batch12.jpg', title: 'Mastermind 🧠' },
+      { src: 'batch13.jpg', title: 'Silent Killer 🤐' },
+      { src: 'batch14.jpg', title: 'The Gangster 🕶️' }
+    ];
+
+    let currentIndex = 0;
+    let audio = new Audio("audio.mp3");
+    let isPlaying = false;
+    
+    let audioCtx, analyser, source, dataArray;
+    let lastBeatTime = 0;
+    const BEAT_THRESHOLD = 215; 
+    const COOLDOWN_MS = 380;     
+
+    function renderGalleryElements() {
+      const filmStrip = document.getElementById('filmStrip');
+      const castView = document.getElementById('castView');
+      const sceneView = document.getElementById('sceneView');
+
+      filmStrip.innerHTML = '';
+      castView.innerHTML = '';
+      sceneView.innerHTML = '';
+
+      mediaList.forEach((item, index) => {
+        const thumb = document.createElement('div');
+        thumb.className = `film-thumb ${index === 0 ? 'active' : ''}`;
+        thumb.id = `thumb${index}`;
+        thumb.onclick = () => manualSelect(index);
+        thumb.innerHTML = `<img src="${item.src}">`;
+        filmStrip.appendChild(thumb);
+
+        const card = document.createElement('div');
+        card.className = 'movie-card';
+        card.id = `card${index}`;
+        card.innerHTML = `
+          <img src="${item.src}" class="card-poster">
+          <div class="card-details">
+            <h4>${item.title}</h4>
+          </div>
+        `;
+        castView.appendChild(card);
+
+        const row = document.createElement('div');
+        row.className = 'scene-row';
+        row.id = `row${index}`;
+        row.innerHTML = `
+          <img src="${item.src}" class="scene-media">
+          <div class="scene-info">
+            <span style="color:#d4af37; font-size:12px;">FRAME ${index + 1}</span>
+            <h3>${item.title}</h3>
+          </div>
+        `;
+        sceneView.appendChild(row);
+      });
+
+      updateUI(0);
+    }
+
+    renderGalleryElements();
+
+    function initAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioCtx.createAnalyser();
+        analyser.fftSize = 256;
+        source = audioCtx.createMediaElementSource(audio);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        dataArray = new Uint8Array(analyser.frequencyBinCount);
+      }
+    }
+
+    function startApp() {
+      document.getElementById('entryScreen').classList.add('fade-out');
+      initAudioContext();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      
+      audio.play().then(() => {
+        isPlaying = true;
+        detectBeat();
+      }).catch(e => console.log("Autoplay blocked"));
+    }
+
+    function togglePhonkBeat() {
+      const btnText = document.getElementById('btnText');
+      const playIcon = document.getElementById('playIcon');
+
+      if (!isPlaying) {
+        initAudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        audio.play();
+        isPlaying = true;
+        btnText.innerText = "PAUSE SCORE";
+        playIcon.innerText = "⏸";
+        detectBeat();
+      } else {
+        audio.pause();
+        isPlaying = false;
+        btnText.innerText = "PLAY TRAILER SCORE";
+        playIcon.innerText = "▶";
+      }
+    }
+
+    function detectBeat() {
+      if (!isPlaying) return;
+
+      analyser.getByteFrequencyData(dataArray);
+      let bassSum = 0;
+      for (let i = 0; i < 6; i++) bassSum += dataArray[i];
+      let bassAvg = bassSum / 6;
+
+      const now = performance.now();
+      if (bassAvg > BEAT_THRESHOLD && (now - lastBeatTime) > COOLDOWN_MS) {
+        lastBeatTime = now;
+        currentIndex = (currentIndex + 1) % mediaList.length;
+        updateUI(currentIndex);
+      }
+
+      requestAnimationFrame(detectBeat);
+    }
+
+    function manualSelect(index) {
+      currentIndex = index;
+      updateUI(currentIndex);
+    }
+
+    function updateUI(index) {
+      const media = mediaList[index];
+      const box = document.getElementById('photoMediaBox');
+      document.getElementById('cinemaTitle').innerText = media.title;
+      
+      box.innerHTML = `<img src="${media.src}" class="screen-media zoom-burst">`;
+
+      for (let i = 0; i < mediaList.length; i++) {
+        const thumb = document.getElementById(`thumb${i}`);
+        if(thumb) thumb.classList.remove('active');
+        const card = document.getElementById(`card${i}`);
+        if(card) card.classList.remove('active-cinema-card');
+        const row = document.getElementById(`row${i}`);
+        if(row) row.classList.remove('active-cinema-card');
+      }
+
+      const activeThumb = document.getElementById(`thumb${index}`);
+      if(activeThumb) {
+        activeThumb.classList.add('active');
+        activeThumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+
+      const activeCard = document.getElementById(`card${index}`);
+      if(activeCard) activeCard.classList.add('active-cinema-card');
+
+      const activeRow = document.getElementById(`row${index}`);
+      if(activeRow) activeRow.classList.add('active-cinema-card');
+    }
+
+    function setMode(type) {
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('theaterView').style.display = 'none';
+      document.getElementById('castView').style.display = 'none';
+      document.getElementById('sceneView').style.display = 'none';
+
+      if(type === 'theater') {
+        document.querySelectorAll('.nav-btn')[0].classList.add('active');
+        document.getElementById('theaterView').style.display = 'flex';
+      } else if(type === 'cast') {
+        document.querySelectorAll('.nav-btn')[1].classList.add('active');
+        document.getElementById('castView').style.display = 'grid';
+      } else if(type === 'scenes') {
+        document.querySelectorAll('.nav-btn')[2].classList.add('active');
+        document.getElementById('sceneView').style.display = 'flex';
+      }
+    }
+  </script>
+</body>
+</html>
