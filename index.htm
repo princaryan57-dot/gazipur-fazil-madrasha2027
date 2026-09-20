@@ -212,6 +212,12 @@
 
     .scene-view { display: none; flex-direction: column; gap: 20px; }
     .scene-row { display: flex; background: #0d0d14; border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px; overflow: hidden; }
+    
+    @media (max-width: 600px) {
+      .scene-row { flex-direction: column; }
+      .scene-media, .scene-info { width: 100% !important; }
+    }
+
     .scene-media { width: 40%; min-height: 180px; object-fit: cover; }
     .scene-info { width: 60%; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
     .active-cinema-card { border-color: #d4af37 !important; box-shadow: 0 0 25px rgba(212, 175, 55, 0.6) !important; }
@@ -255,7 +261,7 @@
         <!-- Left Side: Fixed Intro Video -->
         <div class="screen-box">
           <label>OFFICIAL INTRO</label>
-          <video class="screen-media" autoplay muted loop>
+          <video class="screen-media" autoplay muted loop playsinline>
             <source src="video.mp4" type="video/mp4">
           </video>
         </div>
@@ -299,7 +305,8 @@
       { src: 'batch11.jpg', title: 'Backbench King 👑' },
       { src: 'batch12.jpg', title: 'Mastermind 🧠' },
       { src: 'batch13.jpg', title: 'Silent Killer 🤐' },
-      { src: 'batch14.jpg', title: 'The Gangster 🕶️' }
+      { src: 'batch14.jpg', title: 'The Gangster 🕶️' },
+      { src: 'batch15.jpg', title: 'The Legend ✨' } // 👈 নতুন ছবি যুক্ত করা হয়েছে
     ];
 
     let currentIndex = 0;
@@ -374,6 +381,9 @@
       initAudioContext();
       if (audioCtx.state === 'suspended') audioCtx.resume();
       
+      const videoElem = document.querySelector('.screen-box video');
+      if (videoElem) videoElem.play().catch(e => console.log(e));
+
       audio.play().then(() => {
         isPlaying = true;
         detectBeat();
